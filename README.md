@@ -8,7 +8,20 @@ keytool  -genkeypair -alias key0 -keyalg RSA -validity 400 -keystore demo.jks
 ## release 配置
 
 ```
-signingConfigs {
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.payne.ratelstarter"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
         release {
             storeFile file('../demo.jks')
             storePassword '123456'
@@ -26,6 +39,18 @@ signingConfigs {
             signingConfig signingConfigs.release
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/io.netty.versions.properties'
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
 ```
 
 ## release

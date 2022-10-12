@@ -22,6 +22,6 @@ adb install -t app/build/outputs/apk/release/app-release.apk
 
 ```bash
 git clone https://github.com/virjarRatel/ratel-module-template.git
-// example:
+# example:
 sh template.sh -p com.payne.myapplication -m crack-myapplication
 ```

@@ -45,7 +45,6 @@ android {
     }
     namespace 'com.payne.ratelstarter'
     ndkVersion '25.1.8937393'
-    buildToolsVersion '24.0.0'
 }
 
 dependencies {

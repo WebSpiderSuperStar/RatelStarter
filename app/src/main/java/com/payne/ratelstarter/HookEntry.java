@@ -11,8 +11,8 @@ public class HookEntry implements IRposedHookLoadPackage {
 
   @Override
   public void handleLoadPackage(RC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
-    if (lpparam.packageName.equals(PackageName)) {
-      Log.d(TAG, "handleLoadPackage: Hook successfully" + lpparam.packageName);
+    if (lpparam.packageName.equals(HookEntry.PackageName)) {
+      Log.d(HookEntry.TAG, "handleLoadPackage: Hook successfully" + lpparam.packageName);
     }
   }
 }

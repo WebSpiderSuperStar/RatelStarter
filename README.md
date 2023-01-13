@@ -19,7 +19,7 @@ keytool -importkeystore -srckeystore demo.jks -destkeystore demo.jks -deststoret
 ### Build and pack
 
 ```shell
-./gradlew clean app:assembleRelease
+gradle clean app:assembleRelease
 ```
 
 ### install
